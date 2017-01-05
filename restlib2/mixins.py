@@ -1,3 +1,4 @@
+from django.template import Engine
 from django.template import loader
 from django.template import RequestContext
 from django.http import HttpResponse
@@ -17,7 +18,7 @@ class TemplateResponseMixin(object):
         elif self.template_name:
             template = loader.get_template(self.template_name)
         else:
-            template = loader.Template(self.template_string)
+            template = Engine().from_string(self.template_string)
 
         context = RequestContext(request, context)
         content = template.render(context)
