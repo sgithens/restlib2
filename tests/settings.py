@@ -1,6 +1,5 @@
 import os
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
-# from django.conf.global_settings import TEMPLATES
 
 SECRET_KEY = '123abc'
 
@@ -14,14 +13,13 @@ DATABASES = {
 ROOT_URLCONF = 'tests.tests'
 
 INSTALLED_APPS = (
+    # TODO sgithens - There seems to an issue when these are included,
+    # that the tests can't find the db tables to load the test fixtures.
+    # However, the unit tests still pass if these are not included...
     # 'django.contrib.auth',
     # 'django.contrib.contenttypes',
     # 'restlib2',
     # 'tests',
-)
-
-TEMPLATE_CONTEXT_PROCESSORS += (
-    'django.template.context_processors.request',
 )
 
 TEMPLATES = [
