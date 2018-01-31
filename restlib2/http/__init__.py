@@ -1,4 +1,4 @@
-from django.core.handlers.wsgi import STATUS_CODE_TEXT
+from httplib import responses as STATUS_CODE_TEXT
 from restlib2.structures import AttrDict
 
 STATUS_CODE_TEXT.setdefault(422, 'UNPROCESSABLE ENTITY')
