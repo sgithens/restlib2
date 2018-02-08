@@ -14,7 +14,7 @@ kwargs = {
     'url': 'https://github.com/bruth/restlib2',
 
     'install_requires': [
-        'django>=1.4',
+        'django>=1.8',
         'six>=1.4.0',
     ],
 

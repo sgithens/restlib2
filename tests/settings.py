@@ -1,5 +1,4 @@
 import os
-from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
 
 SECRET_KEY = '123abc'
 

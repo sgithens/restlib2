@@ -1,7 +1,7 @@
 from calendar import timegm
 from django.test.client import RequestFactory
 from django.test import TestCase
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 from restlib2 import params
 from restlib2.resources import Resource
 from restlib2.mixins import TemplateResponseMixin
@@ -469,8 +469,7 @@ class TestResource(TemplateResponseMixin, Resource):
         pass
 
 
-urlpatterns = patterns('',
-                       url(r'^$', TestResource(template_name='index.html')))
+urlpatterns =(url(r'^$', TestResource(template_name='index.html')),)
 
 
 class TemplateResourceTestCase(TestCase):
